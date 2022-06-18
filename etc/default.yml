@@ -1,0 +1,26 @@
+graderFunc: |
+  function grader(payload) {
+      var result = -1
+
+  	var data = []
+
+  	if (payload['data'] === undefined || payload['data']['predictions'] === undefined) {
+        return result
+      }
+
+      result = 0
+
+  	data = payload['data']['predictions']
+
+      _.each(data, function(value, key) {
+          if (value["score"] > 0.3) {
+              result = 1
+          }
+      })
+
+      return result
+  }
+sourcerCmd: |
+  go run ./cmd/sourcer-imageroulette/main.go data/folder-roulette
+serviceUrl: http://127.0.0.1:3001/api/v1/images
+listenAddr: 0.0.0.0:1502
