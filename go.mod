@@ -7,6 +7,7 @@ require (
 	github.com/aws/aws-lambda-go v1.32.0
 	github.com/aws/aws-sdk-go v1.44.37
 	github.com/awslabs/aws-lambda-go-api-proxy v0.13.2
+	github.com/blackjack/webcam v0.0.0-20220329180758-ba064708e165
 	github.com/docopt/docopt-go v0.0.0-20180111231733-ee0de3bc6815
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/gin-gonic/gin v1.8.1
